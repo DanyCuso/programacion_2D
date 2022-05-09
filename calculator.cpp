@@ -1,3 +1,9 @@
+/*************************************************************
+ *              calculadora de operaciones basicas           *
+ *                          DanyCuso                         *
+ *              Daniel Valdes Artiles ----- 2B               *
+ *************************************************************/
+
 #include <stdio.h>
 
 //declarando variables
@@ -21,24 +27,26 @@ int main (){
     printf("elige la operacion que deseas realizar: type:\n\ts ----> Suma\n\tr ----> Resta\n\td ----> Division\n\tm ----> Multiplicacion\noperacion:\t");
     scanf("%s", &selection);
 
-    if (selection == 's'){
+    //resolviendo operaciones 
 
+    if (selection == 's'){      //operacion suma
+    
         result = num1 + num2;
         printf("\nel resultado es: %.f\n", result);
     }
-    if(selection == 'r'){
+    if(selection == 'r'){     // operacion resta  
         result = num1 - num2;
         printf("\nel resultado es: %.f\n", result);
     }
-    if(selection == 'd'){
+    if(selection == 'd'){       // operacion division
         result = num1 / num2;
         printf("\nel resultado es: %.02f\n", result);
     }
-    if (selection == 'm'){
+    if (selection == 'm'){      //operacion multiplicacion 
         result = num1 * num2;
         printf("\nel resultado es: %.f\n", result);
     }
-    else {
+    else {      //operacion invalida
         printf("System Error: Invalid operation\n");       
     }
 return 0;
