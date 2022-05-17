@@ -14,7 +14,7 @@ int main(){
         printf("Good Midnight\n");
     }
     else if (time < 12 && time >= 0){
-        printf("Godd morning\n");
+        printf("Good morning\n");
     }
     else if (time > 12 && time <= 18){
         printf("Good evening\n");
