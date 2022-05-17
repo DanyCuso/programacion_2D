@@ -8,19 +8,19 @@
 
 //declarando variables
 
-int num1 = 0;
-int num2 = 0;
+float num1 = 0;
+float num2 = 0;
 char selection;
-float result = 0;
+double result = 0;
 
 int main (){
 
     //pidiendo los datos para calcular
 
     printf("ingresa un mumero\n");
-    scanf("%d", &num1);
+    scanf("%f", &num1);
     printf("ingresa otro numero\n");
-    scanf("%d", &num2);
+    scanf("%f", &num2);
 
     // seleccionando la operacion que desea realizar
 
@@ -32,19 +32,19 @@ int main (){
     if (selection == 's'){      //operacion suma
     
         result = num1 + num2;
-        printf("\nel resultado es: %.f\n", result);
+        printf("\nel resultado es: %.lf\n", result);
     }
     if(selection == 'r'){     // operacion resta  
         result = num1 - num2;
-        printf("\nel resultado es: %.f\n", result);
+        printf("\nel resultado es: %.lf\n", result);
     }
     if(selection == 'd'){       // operacion division
         result = num1 / num2;
-        printf("\nel resultado es: %.02f\n", result);
+        printf("\nel resultado es: %.02lf\n", result);
     }
     if (selection == 'm'){      //operacion multiplicacion 
         result = num1 * num2;
-        printf("\nel resultado es: %.f\n", result);
+        printf("\nel resultado es: %.lf\n", result);
     }
     else {      //operacion invalida
         printf("System Error: Invalid operation\n");       
