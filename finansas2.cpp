@@ -5,49 +5,67 @@ int main () {
     int saldo = 1000;
 
 
-    while (1){
+    while (1) {
 
-        char operador = 0;
+        int operador;
 
         printf("\ntu saldo actual es de %d\n", saldo);
 
-        printf("\nque operacion desear realizar\n\tdeposito ----> d\n\tretiro ----> r\noperacion:\t");
-        scanf("%c", &operador);
+        printf("\nque operacion desear realizar\n\tdeposito ----> 1\n\tretiro ----> 2\noperacion:\t");
+        scanf("%d", &operador);
 
-        if (operador == 'd'){
-            int deposito = 0;
-            printf("\ncuanto desea depositar?\t");
-            scanf("%d", &deposito);  
+        switch (operador) {
+        case 1:
+            
+            int deposito;
+            printf("\ncuanto deseas depositar?\t");
+            scanf("%d", &deposito);
 
             saldo = saldo + deposito;
-        } 
-        else if (operador == 'r'){
-            int retiro = 0;
+            break;
+        case 2:
+            
+            int retiro;
             printf("\ncuanto desea retirar?\t");
             scanf("%d", &retiro);
 
-            saldo = saldo - retiro; 
-        }
-        else {
-            printf("\nSystem Error: Invalid operation\n");
+            saldo = saldo - retiro;
+
+            if (saldo < 0){
+                printf("\nSystem Error: Saldo insuficiente\n");
+                printf("\nSystem: Exit Program\n");
+                return 0;
+            }
+            break;
+        
+        default:
+
+            printf("\noperacion invalida\n");
+            printf("System: Exit program\n");
             return 0;
+            break;
         }
 
-        if (saldo < 1000) { 
-            printf("\nsaldo insuficiente\n");
-            break; 
-        }
+        printf("\ntu nuevo saldo es %d\n", saldo );
 
-        /*char iterador;
-        printf("\ndesea realizar otra operacion?");
-        scanf("%c", &iterador);
+        int operador2;
+        printf("\ndesea realizar otra operacion?\n\tSI(1) --- NO(2)\n");
+        scanf("%d", &operador2);
 
-        if (iterador == 'n') { return 0; }
+        switch (operador2) {
 
-        else {
-            printf("\nSystem Error: invalid operation\n");
+        case 2:
+
+            printf("\ngracias por utilizar este cajero\n");
             return 0;
-        }*/
+            break;
+        
+        default:
+            break;
+        }
+    
+
     }
+
 return 0;
 }
