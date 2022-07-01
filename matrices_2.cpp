@@ -17,7 +17,7 @@ int main (){
             printf("\nDigite un numero[%d][%d]\t", i, j);
             scanf("%d", &numero[i][j]);
         }
-        printf("\n");
+    printf("\n");
     }
     for (int i=0; i<filas; i++){
         for (int j=0; j<columnas; j++){
